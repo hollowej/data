@@ -31,7 +31,7 @@
           var today = new Date();
           var pastDate = new Date();
           pastDate.setFullYear(today.getFullYear() - 5); // Set the date to 5 years ago
-          var url = `https://api.stlouisfed.org/fred/series/observations?series_id=MORTGAGE30US&api_key=${9c378574b0a2ab8ac12311e0ec335ebb}&file_type=json&realtime_start=${pastDate.toISOString().slice(0,10)}&realtime_end=${today.toISOString().slice(0,10)}`;
+          var url = `https://api.stlouisfed.org/fred/series/observations?series_id=MORTGAGE30US&api_key=${api_key}&file_type=json&realtime_start=${pastDate.toISOString().slice(0,10)}&realtime_end=${today.toISOString().slice(0,10)}`;
 
           $.getJSON(url, function(resp) {
             var feat = resp.observations,
